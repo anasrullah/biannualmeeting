@@ -31,14 +31,14 @@ jQuery(document).ready(function () {
                 if ($(this).scrollTop() > 70) { // Set position from top to add class
                     $('.navbar').addClass("shrink");
       
-                    $('.orange .navbar-brand> img').attr('src', 'website/logb.png');
+                    $('.orange .navbar-brand> img').attr('src', 'assets/home/website/logb.png');
 
 
                 }
                 else {
                     $('.navbar').removeClass("shrink");
 
-                    $('.orange .navbar-brand> img').attr('src', 'website/logw.png');
+                    $('.orange .navbar-brand> img').attr('src', 'assets/home/website/logw.png');
 
                 }
 
