@@ -57,6 +57,8 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{ url('pages/registrasi_klinik') }}"><i class="fa fa-circle-o"></i> Klinik Akreditasi</a></li>
+            <li><a href="{{ url('pages/registrasi_pameran') }}"><i class="fa fa-circle-o"></i> Pameran Akreditasi</a></li>
+            <li><a href="{{ url('pages/registrasi_seminar') }}"><i class="fa fa-circle-o"></i> Seminar Akreditasi</a></li>
           </ul>
         </li>
       </ul>

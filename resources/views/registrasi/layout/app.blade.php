@@ -184,7 +184,9 @@
 
 
   $("#pt").change(function(){
-      $.post("{{ url('registrasi/getPS') }}",{idPT:$("#"+this.id).val(), _method : 'HEAD'},function(result){
+    var id = $("#pt").val()
+      // alert(id);
+      $.post("{{ url('registrasi/getPS') }}",{idPT:$("#"+this.id).val(), _method : 'GET'},function(result){
           $("#tarikPS").html(result);
       });
   });

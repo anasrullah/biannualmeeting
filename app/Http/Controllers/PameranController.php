@@ -21,12 +21,14 @@ class PameranController extends Controller
      */
     public function index()
     {
-        return view('registrasi.pameran.pameran');
+        $registrasi_pameran = Pameran ::all();
+        dd($registrasi_pameran);
+        return view('admin.pages.pameranakreditasi',compact('registrasi_pameran'));
     }
 
     public function pameran()
     {
-        $url = 'http://192.168.1.85/simak.juli/webservice/getPT/?request=get_pt_assesor&kode_pt=null';
+        $url = 'https://akreditasi.lamptkes.org/webservice/getPT/?request=get_pt_assesor&kode_pt=null';
         $get = json_decode(file_get_contents($url), TRUE);
         // print_r($get);
         return view('registrasi.pameran.pameran')->with('get', $get);   
@@ -40,7 +42,7 @@ class PameranController extends Controller
 
         $kodePT = $data_pt[0];
 
-        $url = "http://192.168.1.85/simak.juli/webservice/getPS/?request=get_ps_prodi&kodept=".$kodePT."";
+        $url = "https://akreditasi.lamptkes.org/webservice/getPS/?request=get_ps_prodi&kodept=".$kodePT."";
         $getPS = json_decode(file_get_contents($url), TRUE);
 
         echo '<select class="form-control" id="ps" name="ps" onchange="checkps()">';
@@ -89,8 +91,7 @@ class PameranController extends Controller
         $jenjangPS = $data_ps[2];
         $bidang_keilmuan = $data_ps[3];
 
-        $pameran->nama = $request->nama;
-        $pameran->jenis_kelamin = $request->jenis_kelamin;
+        $pameran->nama_stan = $request->nama_stan;
         $pameran->hp = $request->hp;
         $pameran->nama_pt = $namaPT;
         $pameran->nama_ps = $namaPS;
@@ -102,6 +103,16 @@ class PameranController extends Controller
         $pameran->institusi = $request->institusi;
         $pameran->alamat_institusi = $request->alamat_institusi;
         $pameran->email = $request->email;
+        $pameran->penjaga1_nama = $request->penjaga1_nama;
+        $pameran->penjaga1_jk = $request->penjaga1_jk;
+        $pameran->penjaga1_jabatan = $request->penjaga1_jabatan;
+        $pameran->penjaga1_email = $request->penjaga1_email;
+        $pameran->penjaga1_hp = $request->penjaga1_hp;
+        $pameran->penjaga2_nama = $request->penjaga2_nama;
+        $pameran->penjaga2_jk = $request->penjaga2_jk;
+        $pameran->penjaga2_jabatan = $request->penjaga2_jabatan;
+        $pameran->penjaga2_email = $request->penjaga2_email;
+        $pameran->penjaga2_hp = $request->penjaga2_hp;
         $pameran->input_date = NOW();
         $input['bukti_bayar'] = '/bukti_bayar/'.$request->bukti_bayar->getClientOriginalName();
         $upload = $request->bukti_bayar->move(public_path('/bukti_bayar'), $input['bukti_bayar']);
@@ -113,7 +124,8 @@ class PameranController extends Controller
             echo "berhasil";
             var_dump($upload);
         }
-
+            return redirect('registrasi');
+        
     }
 
     /**

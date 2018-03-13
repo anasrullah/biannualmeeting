@@ -22,7 +22,10 @@ class Seminar extends Model
                             'fakultas', 
                             'institusi',
                             'alamat_institusi',
-                            'email'
+                            'email',
+                            'nama_pengirim',
+                            'bank_pengirim',
+                            'norek_pengirim'
                           ];
 
     public $timestamps = false; 

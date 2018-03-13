@@ -26,7 +26,7 @@ class SeminarController extends Controller
 
     public function seminar()
     {
-        $url = 'http://192.168.1.85/simak.juli/webservice/getPT/?request=get_pt_assesor&kode_pt=null';
+        $url = 'https://akreditasi.lamptkes.org/webservice/getPT/?request=get_pt_assesor&kode_pt=null';
         $get = json_decode(file_get_contents($url), TRUE);
         // print_r($get);
         return view('registrasi.seminar.seminar')->with('get', $get);   
@@ -40,7 +40,7 @@ class SeminarController extends Controller
 
         $kodePT = $data_pt[0];
 
-        $url = "http://192.168.1.85/simak.juli/webservice/getPS/?request=get_ps_prodi&kodept=".$kodePT."";
+        $url = "https://akreditasi.lamptkes.org/webservice/getPS/?request=get_ps_prodi&kodept=".$kodePT."";
         $getPS = json_decode(file_get_contents($url), TRUE);
 
         echo '<select class="form-control" id="ps" name="ps" onchange="checkps()">';
@@ -102,6 +102,9 @@ class SeminarController extends Controller
         $seminar->institusi = $request->institusi;
         $seminar->alamat_institusi = $request->alamat_institusi;
         $seminar->email = $request->email;
+        $registrasi->nama_pengirim = $request->nama_pengirim;
+        $registrasi->bank_pengirim = $request->bank_pengirim;
+        $registrasi->norek_pengirim = $request->norek_pengirim;
         $seminar->input_date = NOW();
         $input['bukti_bayar'] = '/bukti_bayar/'.$request->bukti_bayar->getClientOriginalName();
         $upload = $request->bukti_bayar->move(public_path('/bukti_bayar'), $input['bukti_bayar']);

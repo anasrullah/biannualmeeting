@@ -39,6 +39,14 @@ Route::get('/pages/registrasi_klinik', function () {
     return view('admin/pages/registrasi/klinikakreditasi');
 });
 
+Route::get('/pages/registrasi_pameran', function () {
+    return view('admin/pages/registrasi/pameranakreditasi');
+});
+
+Route::get('/pages/registrasi_seminar', function () {
+    return view('admin/pages/registrasi/seminarakreditasi');
+});
+
 Route::get('registrasi', 'RegistrasiController@index');
 Route::post('registrasi/store', 'RegistrasiController@store');
 Route::get('registrasi/klinik', 'RegistrasiController@klinik');

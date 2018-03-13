@@ -26,7 +26,7 @@ class RegistrasiController extends Controller
 
     public function klinik()
     {
-        $url = 'http://192.168.1.85/simak.juli/webservice/getPT/?request=get_pt_assesor&kode_pt=null';
+        $url = 'https://akreditasi.lamptkes.org/webservice/getPT/?request=get_pt_assesor&kode_pt=null';
         $get = json_decode(file_get_contents($url), TRUE);
         // print_r($get);
         return view('registrasi/klinik')->with('get', $get);   
@@ -40,7 +40,7 @@ class RegistrasiController extends Controller
 
         $kodePT = $data_pt[0];
 
-        $url = "http://192.168.1.85/simak.juli/webservice/getPS/?request=get_ps_prodi&kodept=".$kodePT."";
+        $url = "https://akreditasi.lamptkes.org/webservice/getPS/?request=get_ps_prodi&kodept=".$kodePT."";
         $getPS = json_decode(file_get_contents($url), TRUE);
 
         echo '<select class="form-control" id="ps" name="ps" onchange="checkps()">';
@@ -102,6 +102,11 @@ class RegistrasiController extends Controller
         $registrasi->institusi = $request->institusi;
         $registrasi->alamat_institusi = $request->alamat_institusi;
         $registrasi->email = $request->email;
+        $registrasi->nama_pengirim = $request->nama_pengirim;
+        $registrasi->bank_pengirim = $request->bank_pengirim;
+        $registrasi->norek_pengirim = $request->norek_pengirim;
+        $registrasi->nama_pt = $request->pti;
+        $registrasi->nama_ps = $request->nama_psi;
         $registrasi->input_date = NOW();
         $input['bukti_bayar'] = '/bukti_bayar/'.$request->bukti_bayar->getClientOriginalName();
         $upload = $request->bukti_bayar->move(public_path('/bukti_bayar'), $input['bukti_bayar']);
@@ -111,7 +116,9 @@ class RegistrasiController extends Controller
             echo "gagal";
         }else{
             echo "berhasil";
-            var_dump($upload);
+            // var_dump($upload);
+
+            return view('registrasi.index');
         }
 
     }
