@@ -249,34 +249,49 @@
     <div id="about-us-1" class="big-padding">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 wow slideInLeft">
+                <div class="col-sm-5 col-sm-offset-1 wow slideInLeft" style="padding-top: 50px">
                     <div class="outer-bound">
                         <div class="left-section vertical-heading">
-                            <h2 class="big-text">2ND <strong>ANNUAL MEETING</strong> <br>
-                                LAM-PTKes (IAAHEH)<br>2018 Jakarta, Indonesia</h2>
-
+                            <h2 class="big-text">
+                                <img src="{{ asset('assets/home/website/logo_lam2.png') }}" alt="logo lam">
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 wow slideInRight">
                     <div class="right-section">
-                        <h5><center><strong>"IAAHEH Optimizing Organizational Roles Of Its Members Through Accreditation And Continuous Quality Improvement Towards Global Recognition"</strong></center></h5>
-                        <p>
-                            Dalam rangka Hari Kesehatan Nasional, LAM-PTKes mengadakan Pertemuan Tahunan LAM-PTKes (IAAHEH Annual Meeting) 2018 yang merupakan kegiatan Pertemuan Tahunan kedua semenjak operasionalnya pada bulan Maret 2015. Tujuan dari kegiatan ini adalah untuk meningkatkan kesadaran program studi tentang pentingnya akreditasi sebagai bagian yang tidak terpisahkan dalam penjaminan mutu, menginformasikan perkembangan dan kemajuan LAM-PTKes serta menampung informasi dan masukan untuk meningkatkan kinerja LAM-PTKes.
+                        <h3><center><strong>"TENTANG LAM-PTKes"</strong></center></h3>
+                        <p align="justify">
+                            Lembaga Akreditasi Mandiri Pendidikan Tinggi Kesehatan Indonesia (LAM-PTKes) yang bahasa Inggrisnya adalah Indonesian Accreditation Agency for Higher Education in Health (IAAHEH) didirikan pada awal tahun 2014 sebagai badan hukum perkumpulan berdasarkan Keputusan Menteri Hukum dan HAM No.AHU-30.AH.01.07 dengan anggota dari 7 Organisasi Profesi dan 7 Asosiasi Institusi Pendidikan bidang ilmu kesehatan: Kedokteran, Kedokteran Gigi, Keperawatan, Kebidanan, Kesehatan Masyarakat, Farmasi, Gizi.
                         </p>
-                        <p>
-                            Keluaran yang diharapkan adalah: 1. Program Studi sudah lebih siap untuk diakreditasi dan reakreditasi, sehingga mengajukan akreditasi 6 bulan sebelum habis masa berlakunya; 2. Tindaklanjut masukan untuk perbaikan kinerja LAM-PTKes; 3. Terinformasikannya upaya rekognisi LAM-PTKes oleh Badan Akreditasi Internasional.
+                        <p align="justify">
+                            Tujuan akreditasi oleh LAM-PTKes bukan hanya untuk memberikan status dan peringkat akreditasi prodi saja, tetapi utamanya adalah untuk menumbuhkan kesadaran, motivasi, dan langkah-langkah konkret yang akhirnya bermuara pada budaya peningkatan mutu berkelanjutan (culture of continuous quality improvement)
                         </p>
                     </div>
                 </div>
 
             </div>
+            <br><hr><br>
             <div class="row">
-                <div class="col-xs-12 wow fadeInUp" data-wow-duration="2s">
-                    <div class="bottom-section">
-                        <img src="{{ asset('assets/home/images/about-us1-bg.jpg') }}" alt="about-us-bg" class="img-responsive">
+                <div class="col-sm-5 col-sm-offset-1 wow slideInLeft" style="padding-top: 50px">
+                    <div class="outer-bound">
+                        <div class="left-section vertical-heading">
+                                <img src="{{ asset('assets/home/website/log_2ndannual.png') }}" alt="logo">
+                            
+                        </div>
                     </div>
                 </div>
+                <div class="col-sm-6 wow slideInRight">
+                    <div class="right-section">
+                        <h3><center><strong>"TENTANG 2ND ANNUAL MEETING LAM-PTKes"</strong></center></h3>
+                        <p align="justify">
+                            2nd Annual Meeting LAM-PTKes 2018 merupakan upaya untuk mempublikasikan LAM-PTKes di tingkat Nasional dan Internasional. Selain itu, kegiatan ini juga bertujuan untuk menjamin mutu LAM-PTKes yang saat ini dalam proses rekognisi Internasional. 2nd Annual Meeting LAM-PTKes 2018 berlangsung selama tiga hari, dengan mengundang narasumber yang berasal dari dalam dan luar negeri. 2nd Annual Meeting 2018 terdiri dari rangkaian kegiatan yaitu seminar nasional, semiloka, klinik akreditasi, pameran, dan konferensi pers.
+                        </p>
+                        <p align="justify">
+                            Kegiatan ini diharapkan dapat lebih memperkenalkan LAM-PTKes serta meyakinkan program studi dan masyarakat umum terhadap mutu LAM-PTKes yang saat ini sedang dalam proses rekognisi internasional. Publikasi LAM-PTKes dalam skala yang luas ini dapat menjadi peluang kepada LAM-PTKes untuk menunjukkan kehandalan dalam proses akreditasi dalam rangka menjadi lembaga yang kredibel dan dipercaya masyarakat.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -472,7 +487,7 @@
 
                                     <h5>Kegiatan 04</h5>
                                     <h4>PAMERAN</h4>
-                                    <p>Pameran Pendidikan akan diikuti oleh Perguruan Tinggi yang memiliki Program Studi dengan peringkat akreditasi "A"</p>
+                                    <p>Pameran akan diikuti oleh Perguruan Tinggi Kesehatan dan Alat Kesehatan</p>
 
                                 </div>
                             </div>
@@ -491,8 +506,7 @@
 
                                     <h5>Kegiatan 05</h5>
                                     <h4>KONFERENSI PERS</h4>
-                                    <p>Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has
-                                        been the industry’s standard dummy.</p>
+                                    <p>Akan dilaksanakan konferensi pers yang mengundang berbagai media cetak dan televisi</p>
                                 </div>
                             </div>
                         </div>
@@ -555,7 +569,6 @@ Kel. Pondok Pinang, Kec. Kebayoran Lama <br>Jakarta Selatan, 12310</span>
                     <div class="right-section" id="form-elements">
                         <form  onsubmit="return false" method="post">
                             <h4>Leave Message</h4>
-                            <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
                             <div class="row">
                             <div class="col-md-12 center"><div id="result"></div> </div>
                             </div>
